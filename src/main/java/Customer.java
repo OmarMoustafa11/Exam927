@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-
 public abstract class Customer extends Person{
-private Clothing [] clothes;
+Clothing [] clothes;
     private char size;
     private double price;
 
@@ -9,7 +7,7 @@ private Clothing [] clothes;
         return price;
     }
 
-    public Customer(String name, Clothing[] clothes) {
+    public Customer(String name, Clothing[] clothes, char size, double discount) {
         super(name);
         this.clothes = clothes;
     }

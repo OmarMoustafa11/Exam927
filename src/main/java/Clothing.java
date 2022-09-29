@@ -49,6 +49,7 @@ public class Clothing {
     }
 
     public char getSize(Clothing clothing){
+
         return size;
     }
 
