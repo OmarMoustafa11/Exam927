@@ -28,6 +28,8 @@ public class Main {
         System.out.println("the" + jeans + "is" + shopApp.isAFit(manager1,jeans));
         System.out.println("the" + jeans + "is" + ShopApp.isAFit(employee1,shirt));
         System.out.println(shopApp.calcTotal(managercart));
+        ShopApp.sortAndPrintClothingByPrice(clothes);
+
 
 
 

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ShopApp {
     public static double calcTotal(Clothing[] clothing) {
@@ -15,7 +16,11 @@ public class ShopApp {
        return true;
     }
 
-    public static void sortAndPrintClothingByPrice(ArrayList<Clothing> clothing) {}
+    public static void sortAndPrintClothingByPrice(ArrayList<Clothing> clothing) {
+        clothing.sort(Comparator.comparingDouble(Clothing::getPrice));
+
+        clothing.forEach(System.out::println);
+    }
 
     public static void printEmployeeName(Employee employee) {
 
@@ -23,11 +28,11 @@ public class ShopApp {
     }
 
 
-    public static void printDiscAmntOff(Discountable[] discountables,Clothing clothing){
-        for(int x = 0; x < discountables.length;x++);
-          // System.out.println(discountables(x).calcDiscount(clothing));
+    public static void printDiscAmntOff(Discountable[] discountables,Clothing clothing) {
+        for (int x = 0; x < discountables.length; x++) {
+            System.out.println(discountables[x].calcDiscount());
+        }
     }
-
 }
 
 
